@@ -11,9 +11,9 @@ def repeat(value: Any, times: int) -> List[Any]:
     return [value] * times
 
 
-# Valid things
+# Valid things (are they all allowed by mypy?)
 my_int = repeat(0, 100)[0] - 12
 my_text = repeat("hello", 100)[0] + " world"
 
-# Invalid things
-bad_int = repeat(0, 100)[0] + " words"
+# Invalid things (are they all caught by mypy?)
+bad_int = repeat(0, 100)[0] + " words"  # Trying to add a number and a string

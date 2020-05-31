@@ -28,11 +28,11 @@ class Circle:
             raise ValueError("Must give either a radius or circumference")
 
 
-# Valid things
+# Valid things (are they all allowed by mypy?)
 Circle(radius=1.0)
 Circle(circumference=math.tau)
 
-# Invalid things
+# Invalid things (are they all caught by mypy?)
 Circle(radius=None)
 Circle(circumference=None)
 Circle(radius=1.0, circumference=None)
